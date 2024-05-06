@@ -24,11 +24,6 @@
                      </a>
                   </div>
                   <div class="blog-post-content">
-                     <div class="blog-post-tag @@category">
-                     {% for tag in blog.data.tags limit: 2 %}
-                        <a href="/tags/{{ tag }}/">{{ tag }}</a>
-                     {% endfor %}
-                     </div>
                      <div class="blog-post-title">
                         <a href="{{ blog.url }}" class="">{{blog.data.title}}</a>
                      </div>
