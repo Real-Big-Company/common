@@ -84,18 +84,18 @@
         </div>
       </div>
       <div class="row">
-        {% for blog in syndicatedNews %}
+        {% for blog in syndicatedNews limit: 3 %}
           {% capture post_url %}{{ blog.data.division_url }}/news/{{ blog.data.division | slugify}}/{{ blog.data.title | slugify }}/{% endcapture %}
           <div class="col-lg-4 col-md-6">
             <article class="blog-post">
               <div class="blog-post-thumb">
-                <a href="{{ blog.url }}">
+                <a href="{{ post_url }}">
                   <img src="{{ blog.data.division_url }}{{ blog.data.thumbImg.image }}" alt="{{ blog.data.thumbImg.image_alt }}" />
                 </a>
               </div>
               <div class="blog-post-content">
                 <div class="blog-post-title">
-                  <a href="{{ blog.url }}">{{ blog.data.title }}</a>
+                  <a href="{{ post_url }}">{{ blog.data.title }}</a>
                 </div>
               </div>
             </article>
