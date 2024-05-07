@@ -15331,7 +15331,11 @@ a {
                      position: relative;
                      padding-left: $base-padding * 0.4;
                      margin-left: $base-margin * 1.2;
-                     &::after {
+                     &:first-child {
+                        margin-left: 0;
+                        padding-left: 0;
+                     }
+                     &:not(:first-child)::after {
                         position: absolute;
                         content: '';
                         background: $color-text-light;
