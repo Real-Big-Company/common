@@ -15148,6 +15148,19 @@ a {
 /********** 
  16. Blog Page and Section Styles
 **********/
+.report {
+   &.blog {
+      margin-top: 0;
+   }
+   
+   li {
+      list-style-type: none;
+   }
+
+   .blog-post-title a {
+      text-decoration: underline;
+   }
+}
 .blog {
    margin-top: -$base-margin * 22;
    @include media-breakpoint-down-xxl {
@@ -15210,7 +15223,7 @@ a {
          }
       }
       &-tag {
-         a {
+         a, span {
             background: $color-secondary-light;
             border-radius: 6px;
             padding: 4px 10px;
