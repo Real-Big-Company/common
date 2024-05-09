@@ -99,7 +99,7 @@
       }
     }
   }
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 }
